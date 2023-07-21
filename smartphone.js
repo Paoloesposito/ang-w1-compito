@@ -85,6 +85,24 @@ function calcolaMinutiPossibili(saldoResiduo) {
     var costoChiamataAlMinuto = 0.20;
     return Math.floor(saldoResiduo / costoChiamataAlMinuto);
 }
+// Funzione per effettuare la ricarica per un utente
+function effettuaRicarica(userId) {
+    var importoRicaricaInput = document.getElementById("ricaricaUser".concat(userId));
+    var importoRicarica = parseFloat(importoRicaricaInput.value);
+    if (isNaN(importoRicarica)) {
+        console.log("Importo ricarica non valido.");
+        return;
+    }
+    if (userId > 0 && userId <= utenti.length) {
+        var utente = utenti[userId - 1];
+        utente.ricarica(importoRicarica);
+        var userDataElement = document.getElementById("userData".concat(userId));
+        var userCallLogElement = document.getElementById("userCallLog".concat(userId));
+        if (userDataElement && userCallLogElement) {
+            updateUserData(utente, userDataElement, userCallLogElement);
+        }
+    }
+}
 // Funzione per aggiornare i dati dell'utente sulla pagina HTML
 function updateUserData(user, dataElement, callLogElement) {
     var saldoResiduo = user.numero404();

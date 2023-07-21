@@ -73,6 +73,29 @@ function calcolaMinutiPossibili(saldoResiduo: number): number {
   return Math.floor(saldoResiduo / costoChiamataAlMinuto);
 }
 
+// Funzione per effettuare la ricarica per un utente
+function effettuaRicarica(userId: number): void {
+  const importoRicaricaInput = document.getElementById(`ricaricaUser${userId}`) as HTMLInputElement;
+  const importoRicarica = parseFloat(importoRicaricaInput.value);
+
+  if (isNaN(importoRicarica)) {
+    console.log("Importo ricarica non valido.");
+    return;
+  }
+
+  if (userId > 0 && userId <= utenti.length) {
+    const utente = utenti[userId - 1];
+    utente.ricarica(importoRicarica);
+
+    const userDataElement = document.getElementById(`userData${userId}`);
+    const userCallLogElement = document.getElementById(`userCallLog${userId}`);
+
+    if (userDataElement && userCallLogElement) {
+      updateUserData(utente, userDataElement, userCallLogElement);
+    }
+  }
+}
+
 // Funzione per aggiornare i dati dell'utente sulla pagina HTML
 function updateUserData(user: UtenteSmartphone, dataElement: HTMLElement, callLogElement: HTMLElement) {
   const saldoResiduo = user.numero404();
