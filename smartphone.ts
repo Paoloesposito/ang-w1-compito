@@ -12,7 +12,7 @@ abstract class UtenteSmartphone {
     public carica: number = 0,
     public numeroChiamate: number = 0,
     public registroChiamate: Chiamata[] = [],
-    public immagine: string // Aggiungi il parametro immagine al costruttore
+    public immagine: string 
   ) {}
 
   ricarica(unaRicarica: number): void {
@@ -110,7 +110,7 @@ function updateUserData(user: UtenteSmartphone, dataElement: HTMLElement, callLo
     <p>Minuti di Chiamata Possibili: ${minutiPossibili} minuti</p>
   `;
 
-  // Aggiungi il registro delle chiamate
+
   callLogElement.innerHTML = "";
   user.registroChiamate.forEach((chiamata) => {
     callLogElement.innerHTML += `
@@ -121,7 +121,7 @@ function updateUserData(user: UtenteSmartphone, dataElement: HTMLElement, callLo
   });
 }
 
-// Aggiornamento dei dati e del registro delle chiamate per ogni utente
+
 utenti.forEach((utente, index) => {
   utente.ricarica(30 * (index + 1));
   utente.chiamata(10 + (5 * index));
