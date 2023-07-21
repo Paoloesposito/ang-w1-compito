@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Smartphone Data</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartphone Users</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <h1>Smartphone Data</h1>
-    <!-- Blocco dati per il primo utente -->
-    <div>
-      <div id="user1Data"></div>
-      <h3>Registro Chiamate</h3>
-      <ul id="user1CallLog"></ul>
-    </div>
+    <h1>
+      Un Telefono per domarli, un Telefono per trovarli, un Telefono per
+      ghermirli e nel buio incatenarli
+    </h1>
 
-    <!-- Blocco dati per il secondo utente -->
-    <div>
-      <div id="user2Data"></div>
-      <h3>Registro Chiamate</h3>
-      <ul id="user2CallLog"></ul>
-    </div>
+    <main>
+      <div class="users-wrapper">
+        <!-- User 1 -->
+        <div class="user-container">
+          <h2>User 1</h2>
+          <div id="userData1"></div>
 
-    <!-- Blocco dati per il terzo utente -->
-    <div>
-      <div id="user3Data"></div>
-      <h3>Registro Chiamate</h3>
-      <ul id="user3CallLog"></ul>
-    </div>
+          <ul id="userCallLog1"></ul>
+          <a href="https://www.youtube.com/watch?v=BBGEG21CGo0" target="_blank"
+            >View Profile</a
+          >
+        </div>
 
+        <!-- User 2 -->
+        <div class="user-container">
+          <h2>User 2</h2>
+          <div id="userData2"></div>
+
+          <ul id="userCallLog2"></ul>
+          <a href="https://www.youtube.com/watch?v=BBGEG21CGo0" target="_blank"
+            >View Profile</a
+          >
+        </div>
+
+        <!-- User 3 -->
+        <div class="user-container">
+          <h2>User 3</h2>
+          <div id="userData3"></div>
+
+          <ul id="userCallLog3"></ul>
+          <a href="https://www.youtube.com/watch?v=BBGEG21CGo0" target="_blank"
+            >View Profile</a
+          >
+        </div>
+      </div>
+    </main>
     <script src="smartphone.js"></script>
-    <script src=""></script>
   </body>
 </html>

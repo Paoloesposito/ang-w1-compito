@@ -1,0 +1,79 @@
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+  background-image: url("assets/mordor.png");
+  background-size: cover; /* Adatta l'immagine per coprire l'intero main */
+  background-position: center; /* Posiziona l'immagine al centro del main */
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.users-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.user-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.user-container h2 {
+  margin-bottom: 5px;
+  text-align: center;
+  color: #008cba;
+}
+
+.user-container img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-container p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.user-container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.user-container li {
+  list-style: none;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.user-container a {
+  display: block;
+  text-align: center;
+  color: #008cba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.user-container a:hover {
+  color: #005f7e;
+}
+
+.users-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
